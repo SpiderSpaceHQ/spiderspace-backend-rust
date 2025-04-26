@@ -1,0 +1,45 @@
+name: "⁉️ Custom Issue"
+description: Create a ticket for a new custom issue or query
+title: "⁉️ [CUSTOM ISSUE]: "
+labels: ["custom", "needs-triage"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: "📝 Description"
+      description: |
+        Provide a detailed description of the issue or situation.
+        
+        Please include:
+        - Clear steps or context leading to the issue.
+        - Any environment details (OS, browser, app version, etc.), if relevant.
+      placeholder: |
+        Example:
+        - I encountered this issue when...
+        - Environment: Windows 11, Chrome 123
+    validations:
+      required: true
+
+  - type: input
+    id: github-url
+    attributes:
+      label: "🔗 Related GitHub URL"
+      description: Link the related repository, file, or pull request if applicable.
+      placeholder: ex. https://github.com/USERNAME/REPO
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: "📎 Additional Information"
+      description: |
+        Anything else we should know? 
+        You can attach screenshots, logs, links, or any references that help clarify your issue.
+        
+        Tip: Click here to highlight and drag files to upload images or logs.
+      placeholder: |
+        Attachments, related discussions, or anything extra that might help...
+    validations:
+      required: false
+

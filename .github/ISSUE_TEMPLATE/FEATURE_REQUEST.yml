@@ -1,0 +1,102 @@
+name: "💡 Feature Request"
+description: Suggest a new feature or enhancement
+title: "💡 [REQUEST]: "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: input
+    id: start_date
+    attributes:
+      label: "🗓️ Start Date (Optional)"
+      description: When will the development of this feature start?
+      placeholder: "MM/DD/YYYY"
+    validations:
+      required: false
+
+  - type: input
+    id: implementation_pr
+    attributes:
+      label: "🔀 Implementation PR (Optional)"
+      description: If available, mention the Pull Request ID linked to this feature.
+      placeholder: "#PullRequestNumber"
+    validations:
+      required: false
+
+  - type: textarea
+    id: reference_issues
+    attributes:
+      label: "🔗 Reference Issues (Optional)"
+      description: Mention any related or motivating issue numbers.
+      placeholder: "#IssueNumber(s)"
+    validations:
+      required: false
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: "📝 Feature Summary"
+      description: |
+        Clearly describe the desired feature or enhancement.
+        
+        Please cover:
+        - **Problem**: What is the need or limitation?
+        - **Solution**: What feature are you proposing?
+        - **Benefits**: How will it help users or developers?
+      placeholder: |
+        Problem: [Describe the issue]
+        Solution: [Proposed feature]
+        Benefits: [Advantages]
+    validations:
+      required: true
+
+  - type: textarea
+    id: basic_example
+    attributes:
+      label: "📚 Basic Example"
+      description: |
+        Provide one or two basic examples or use-cases where this feature would be useful.
+      placeholder: |
+        Example: "A dark mode toggle button at the top-right corner..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: drawbacks
+    attributes:
+      label: "⚠️ Possible Drawbacks"
+      description: What are the risks, trade-offs, or negative consequences?
+      placeholder: |
+        Example: "Increases app bundle size by 10MB..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: "🔄 Alternatives Considered"
+      description: What other solutions did you consider and why did you reject them?
+      placeholder: |
+        Example: "Considered third-party library but decided against it because of licensing issues."
+    validations:
+      required: false
+
+  - type: textarea
+    id: unresolved_question
+    attributes:
+      label: "❓ Unresolved Questions"
+      description: Are there any open concerns, dependencies, or uncertainties?
+      placeholder: |
+        Example: "Will this work smoothly across all devices?"
+    validations:
+      required: false
+
+  - type: textarea
+    id: related_issues
+    attributes:
+      label: "📎 Anything Else?"
+      description: |
+        Additional links, references, prior art, or anything else that helps us understand this request better.
+      placeholder: |
+        Example: "See also [similar feature request in XYZ Project](https://github.com/xyz/xyz/issues/123)"
+    validations:
+      required: false
+

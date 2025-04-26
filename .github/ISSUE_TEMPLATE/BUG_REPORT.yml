@@ -1,0 +1,124 @@
+name: "🐞 Bug Report"
+description: Report a bug or unexpected behavior
+title: "🐞 [BUG]: "
+labels:
+  - bug
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: "📄 Bug Description"
+      description: A clear and concise description of the issue.
+      placeholder: Briefly describe the bug you encountered...
+    validations:
+      required: true
+
+  - type: input
+    id: reproduction-url
+    attributes:
+      label: "🔗 Reproduction URL"
+      description: Link to the repository, branch, or page where the bug occurs.
+      placeholder: ex: https://github.com/USERNAME/REPO-NAME
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: "✅ Expected Behavior"
+      description: What did you expect to happen?
+      placeholder: Describe what should happen instead...
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: "❌ Actual Behavior"
+      description: What actually happened?
+      placeholder: Tell us what happens instead...
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction-steps
+    attributes:
+      label: "🛠️ Steps to Reproduce"
+      description: Clear steps to replicate the issue.
+      placeholder: |
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: "🖼️ Screenshots"
+      description: Upload screenshots if applicable.
+      placeholder: |
+        ![Screenshot](https://user-images.githubusercontent.com/12345678/12345678-12345678-12345678-12345678.png)
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: "📜 Logs"
+      description: Paste any relevant logs (no need for backticks).
+      placeholder: Paste logs here...
+    validations:
+      required: false
+
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: "🌐 Browsers"
+      description: Which browsers did you experience the problem on?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+        - Opera
+        - Brave
+    validations:
+      required: false
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: "🖥️ Operating System"
+      description: Which OS are you using?
+      multiple: true
+      options:
+        - Windows
+        - Linux
+        - macOS
+        - iOS
+        - Android
+        - Other
+    validations:
+      required: false
+
+  - type: input
+    id: environment-version
+    attributes:
+      label: "⚙️ Environment Version"
+      description: Specify your environment details (OS and version).
+      placeholder: ex: Windows 11, Ubuntu 20.04.4 LTS, iOS 15.4, Android 11, etc.
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: "📚 Additional Context"
+      description: Links, references, or anything else that helps us understand the issue better.
+      placeholder: Add any other context about the problem here...
+    validations:
+      required: false
+
